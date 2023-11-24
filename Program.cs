@@ -135,6 +135,11 @@ namespace Calculator
                 Data.Pos(11, 21, "Error: Man kan ikke dividere med 0.");
             }
         }
+
+        /// <summary>
+        /// Clearing screen
+        /// </summary>
+        /// <param name="clearing"></param>
         static void ClearScreen(char clearing)
         {
 
