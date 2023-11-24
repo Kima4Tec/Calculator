@@ -1,4 +1,6 @@
 ﻿
+using System;
+
 namespace Calculator
 {
     internal class Program
@@ -7,9 +9,10 @@ namespace Calculator
         public static double num2;
 
 
-        static void Main(string[] args)
+        static void Main()
         {
             //setting up the calculator
+            Console.Clear();
             Data.Banner(10, 2);
             Data.BannerText(13, 3);
             Data.NumLockKeys(10, 5);
@@ -34,8 +37,20 @@ namespace Calculator
             string num2a = Console.ReadLine();
             num2 = double.Parse(num2a);
 
-                GetChoice(input);
+            GetChoice(input);
             Console.SetCursorPosition(0, 26);
+
+
+            while (input!= 'c') { 
+            
+            Data.Pos(11, 21, "Tast c for at cleare skærmen              ");
+                Console.SetCursorPosition(11, 22);
+                ConsoleKeyInfo keyInfo = Console.ReadKey();
+            input = char.ToLower(keyInfo.KeyChar);
+            ClearScreen(input);
+            }
+
+
 
         }
 
@@ -72,21 +87,21 @@ namespace Calculator
         {
 
             double result = num1 + num2;
-        static double GetNumberInput()
-        {
-            while (true)
+            static double GetNumberInput()
             {
-                string input = Console.ReadLine();
-                if (double.TryParse(input, out double number))
+                while (true)
                 {
-                    return number;
-                }
-                else
-                {
-                    Data.Pos(11, 21, "Du skal taste et gyldigt tal");
+                    string input = Console.ReadLine();
+                    if (double.TryParse(input, out double number))
+                    {
+                        return number;
+                    }
+                    else
+                    {
+                        Data.Pos(11, 21, "Du skal taste et gyldigt tal");
+                    }
                 }
             }
-        }
             Data.Pos(13, 9, $"= {result}");
         }
 
@@ -118,6 +133,20 @@ namespace Calculator
             else
             {
                 Data.Pos(11, 21, "Error: Man kan ikke dividere med 0.");
+            }
+        }
+        static void ClearScreen(char clearing)
+        {
+
+            switch (clearing)
+            {
+                case 'c':
+                    Main(); ;
+                    break;
+
+                default:
+                Data.Pos(11, 21, "Du skal taste et gyldigt tegn");
+                break;
             }
         }
     }

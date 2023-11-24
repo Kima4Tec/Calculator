@@ -36,7 +36,7 @@ namespace Calculator
             Pos(x, y + 9, @"├─────┼─────┼─────┼─────┤", ConsoleColor.Yellow);
             Pos(x, y + 10, @"│  1  │  2  │  3  │  -  │", ConsoleColor.Yellow);
             Pos(x, y + 11, @"├─────┼─────┼─────┼─────┤", ConsoleColor.Yellow);
-            Pos(x, y + 12, @"│  0  │     │  =  │  +  │", ConsoleColor.Yellow);
+            Pos(x, y + 12, @"│  0  │  C  │  =  │  +  │", ConsoleColor.Yellow);
             Pos(x, y + 13, @"└─────┴─────┴─────┴─────┘", ConsoleColor.Yellow);
 
         }
