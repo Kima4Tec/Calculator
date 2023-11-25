@@ -26,27 +26,31 @@ namespace Calculator
         {
             Pos(x, y + 0, @"┌───────────────────────┐", ConsoleColor.Yellow);
             Pos(x, y + 1, @"│                       │", ConsoleColor.Yellow);
-            Pos(x, y + 2, @"│                       │", ConsoleColor.Yellow);
-            Pos(x, y + 3, @"│                       │", ConsoleColor.Yellow);
-            Pos(x, y + 4, @"│                       │", ConsoleColor.Yellow);
-            Pos(x, y + 5, @"├─────┬─────┬─────┬─────┤", ConsoleColor.Yellow);
-            Pos(x, y + 6, @"│  7  │  8  │  9  │  *  │", ConsoleColor.Yellow);
-            Pos(x, y + 7, @"├─────┼─────┼─────┼─────┤", ConsoleColor.Yellow);
-            Pos(x, y + 8, @"│  4  │  5  │  6  │  /  │", ConsoleColor.Yellow);
-            Pos(x, y + 9, @"├─────┼─────┼─────┼─────┤", ConsoleColor.Yellow);
-            Pos(x, y + 10, @"│  1  │  2  │  3  │  -  │", ConsoleColor.Yellow);
-            Pos(x, y + 11, @"├─────┼─────┼─────┼─────┤", ConsoleColor.Yellow);
-            Pos(x, y + 12, @"│  0  │  C  │  =  │  +  │", ConsoleColor.Yellow);
-            Pos(x, y + 13, @"└─────┴─────┴─────┴─────┘", ConsoleColor.Yellow);
+            Pos(x, y + 2, @"├─────┬─────┬─────┬─────┤", ConsoleColor.Yellow);
+            Pos(x, y + 3, @"│  7  │  8  │  9  │  *  │", ConsoleColor.Yellow);
+            Pos(x, y + 4, @"├─────┼─────┼─────┼─────┤", ConsoleColor.Yellow);
+            Pos(x, y + 5, @"│  4  │  5  │  6  │  /  │", ConsoleColor.Yellow);
+            Pos(x, y + 6, @"├─────┼─────┼─────┼─────┤", ConsoleColor.Yellow);
+            Pos(x, y + 7, @"│  1  │  2  │  3  │  -  │", ConsoleColor.Yellow);
+            Pos(x, y + 8, @"├─────┼─────┼─────┼─────┤", ConsoleColor.Yellow);
+            Pos(x, y + 9, @"│  0  │  C  │  =  │  +  │", ConsoleColor.Yellow);
+            Pos(x, y + 10, @"└─────┴─────┴─────┴─────┘", ConsoleColor.Yellow);
 
         }
+
+        public static void MarkedOperator(int x, int y)
+        {
+            Pos(x + 2, y + 1, @"[+]", ConsoleColor.Blue);
+
+        }
+
 
         public static void Pos(int x, int y, object tekst, ConsoleColor color = ConsoleColor.White) //positioning text
         {
             Console.ForegroundColor = color;
             Console.SetCursorPosition(x, y);
             Console.Write(tekst);
-            Console.ResetColor();
+            //Console.ResetColor();
         }
     }
 }
