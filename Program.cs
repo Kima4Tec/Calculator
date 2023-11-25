@@ -174,7 +174,7 @@ namespace Calculator
         }
         
         /// <summary>
-        /// Checking for operator input
+        /// Checking for operator input to mark
         /// </summary>
         /// <param name="pressedKey"></param>
         /// <param name="keyInfo"></param>
@@ -216,7 +216,7 @@ namespace Calculator
         }
 
         /// <summary>
-        /// Switch checking operator
+        /// Switch checking operator for calculation
         /// </summary>
         /// <param name="choice"></param>
         static void GetChoice(char choice)
