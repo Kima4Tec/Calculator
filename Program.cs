@@ -140,7 +140,7 @@ namespace Calculator
             //get operator
             char input = operatorInput;
 
-            GetChoice(input);
+            DoCalculation(input);
             Console.SetCursorPosition(0, 26);
 
             while (input != 'c')
@@ -219,7 +219,7 @@ namespace Calculator
         /// Switch checking operator for calculation
         /// </summary>
         /// <param name="choice"></param>
-        static void GetChoice(char choice)
+        static void DoCalculation(char choice)
         {
             switch (choice)
             {
