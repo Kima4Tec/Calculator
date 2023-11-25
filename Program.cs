@@ -172,10 +172,15 @@ namespace Calculator
             }
             else { return false; }
         }
-
+        
+        /// <summary>
+        /// Checking for operator input
+        /// </summary>
+        /// <param name="pressedKey"></param>
+        /// <param name="keyInfo"></param>
+        /// <returns></returns>
         static bool GetOperatorInput(char pressedKey, ConsoleKeyInfo keyInfo)
         {
-            //Checking for operator input
             if (pressedKey == '/' || pressedKey == '*' || pressedKey == '-' || pressedKey == '+')
             {
                 switch (pressedKey)
